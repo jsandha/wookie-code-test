@@ -1,0 +1,11 @@
+ <div class="genre" *ngFor="let genre of genres">
+    <h2>{{genre}}</h2>
+  <div class="container" >
+    <div *ngFor=" let movie of movies">
+      <div class="card" *ngIf="movie.genres.includes(genre); ">
+        <a [routerLink]="['/movie/', movie.id]" ><img [src]="movie.poster" style="width: 200px" alt="movies poster"></a>
+      </div>
+      </div>
+  </div>
+</div>
+

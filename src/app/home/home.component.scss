@@ -1,0 +1,28 @@
+.genre{
+  margin: 20px 20px
+}
+
+.container{
+  display: flex;
+  justify-content:stretch;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+  }
+}
+h2 {
+  margin-left: 10%
+}
+.card {
+  flex: 0 0 auto;
+  margin-right: 10px;
+
+  box-sizing: border-box;
+}
+
+.card:hover {
+  border: 1px solid black;
+}

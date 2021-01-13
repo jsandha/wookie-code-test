@@ -1,0 +1,15 @@
+
+<div class="card" *ngIf="movie">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="movie.poster"  class="card-img" alt="movies poster">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="movies-title">{{movie.title + ' ('+ movie.imdb_rating +')'}}<app-rating [rating] ="movie.imdb_rating"></app-rating></h5>
+        <p>{{(movie.released_on | date: 'yyyy')+ ' | '+movie.length +' | '+ movie.director }}<span style="display: block;">{{ 'Cast: ' + movie.cast.join(', ')}}</span></p>
+        <p class="card-text">{{movie.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>
