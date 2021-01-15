@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { MoviesService } from './movies.service';
 import { Component } from '@angular/core';
-import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

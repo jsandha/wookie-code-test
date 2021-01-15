@@ -1,7 +1,6 @@
 import { MoviesService } from './../movies.service';
-import { ActivatedRoute, Route, Router, Routes } from '@angular/router';
-import { Component, Input} from '@angular/core';
-import { debounceTime, delay, map, reduce } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-movie-card',

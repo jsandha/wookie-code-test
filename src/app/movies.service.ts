@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject  } from 'rxjs';
 import { debounceTime, map, share, switchMap } from 'rxjs/operators';
@@ -23,7 +23,7 @@ export class MoviesService {
         (x['movies'])
           .reduce((acc, el) => {
                 if(el.title.toLowerCase().includes(val))
-                acc.push(el)
+                  acc.push(el)
                 return acc
             }, [])))
             ))
