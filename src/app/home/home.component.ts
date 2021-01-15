@@ -17,8 +17,6 @@ constructor(
     this.getMovies()
   }
 getMovies(){
-    this.genres = []
-
     this.movieService.getMovies()
     .subscribe(x=>{
       this.movies = x;

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject  } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { debounceTime, map, share, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class MoviesService {
   })}
 
   search = new BehaviorSubject<string>("");
-  search$ = this.search.asObservable()
+  search$ = this.search.asObservable().pipe(debounceTime(500), share())
 
   constructor(private http: HttpClient) {}
 
